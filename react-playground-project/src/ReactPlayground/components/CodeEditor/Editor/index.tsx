@@ -1,6 +1,5 @@
 import MonacoEditor, { OnMount, EditorProps } from '@monaco-editor/react'
 import { createATA } from './ata';
-import { editor } from 'monaco-editor'
 
 export interface EditorFile {
     name: string
@@ -11,7 +10,7 @@ export interface EditorFile {
 interface Props {
     file: EditorFile
     onChange?: EditorProps['onChange'],
-    options?: editor.IStandaloneEditorConstructionOptions
+    options?: EditorProps['options']
 }
 
 export default function Editor(props: Props) {
